@@ -1,0 +1,39 @@
+.NavBar {
+    width: 100vw;
+    background-color: #f4b498;
+}
+
+.NavBar nav {
+    width: 100vw;
+    background-color: #07739c;
+    box-shadow: -3px 1px 33px 1px rgba(0,0,0,0.34);
+}
+
+.NavBar nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0.5rem;
+}
+
+.NavBar nav ul li a {
+    color: white;
+}
+
+.NavBar nav ul li a:hover {
+    color: #fd8770f5;
+}
+
+.head {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 24px;
+    margin-right: 24px;
+}
+
+
+.head figure {
+    width: 250px;
+    padding: 1rem;
+    margin: 0;
+}
