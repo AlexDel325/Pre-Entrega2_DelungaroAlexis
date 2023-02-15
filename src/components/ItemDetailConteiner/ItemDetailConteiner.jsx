@@ -1,4 +1,5 @@
 import { useParams } from "react-router-dom"
+import ItemCount from "../itemCount/ItemCount"
 
 function ItemDetailConteiner() {
 
@@ -19,7 +20,7 @@ function ItemDetailConteiner() {
                 impedit magni, rerum similique. Tempore commodi asperiores magnam repellat quas sunt, necessitatibus nisi ratione 
                 eveniet nesciunt labore in temporibus dolores? Possimus, aliquam?
             </p>
-            <button>Añadir al carrito</button>
+            <ItemCount initial={1} stock={10} onAdd={()=>{}}/>
         </div>
     </>
     )
