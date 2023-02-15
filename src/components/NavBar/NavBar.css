@@ -6,18 +6,19 @@
 .NavBar nav {
     width: 100vw;
     background-color: #07739c;
-    box-shadow: -3px 1px 33px 1px rgba(0,0,0,0.34);
 }
 
 .NavBar nav ul {
     list-style: none;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     padding: 0.5rem;
+    margin: 0 24px;
 }
 
 .NavBar nav ul li a {
     color: white;
+    text-decoration: none;
 }
 
 .NavBar nav ul li a:hover {
@@ -27,8 +28,7 @@
 .head {
     display: flex;
     justify-content: space-between;
-    margin-left: 24px;
-    margin-right: 24px;
+    width: 100vw;
 }
 
 
