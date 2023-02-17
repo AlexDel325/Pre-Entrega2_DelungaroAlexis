@@ -1,5 +1,6 @@
 import {BrowserRouter, Navigate, Route, Routes } from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css'
+import Container from 'react-bootstrap/Container';
 
 // ------ Componentes ------
 import NavBar from './components/NavBar/NavBar'
@@ -11,6 +12,7 @@ import ItemDetailConteiner from './components/ItemDetailConteiner/ItemDetailCont
 function App() {
 return (
 <BrowserRouter>
+<Container> 
   <header>
     <h1>Pre-Entrega 2</h1>
     <NavBar />
@@ -25,7 +27,7 @@ return (
       </Routes>
     </section>
   </main>
-  
+  </Container>
 </BrowserRouter>
 )
 }

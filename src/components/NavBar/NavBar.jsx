@@ -12,7 +12,7 @@ import  "./NavBar.css"
 
 function NavBar(){
 return(
-<Navbar bg="dark" expand="lg" className='head' fixed="top">
+<Navbar expand="lg" className='head' fixed="top">
     <Container>
         <Link to='/' className='home'>
             <img
@@ -25,9 +25,9 @@ return(
           </Link>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="me-auto">
+          <Nav className="me-auto navegacion">
             <NavLink className={({isActive})=> isActive ? 'color-on' : 'color-off'} to='/categoria/novelas'>Novelas</NavLink>
-            <NavLink className={({isActive})=> isActive ? 'color-on' : 'color-off'} to='/categoria/manuales'>Manuales</NavLink>
+            <NavLink className={({isActive})=> isActive ? 'color-on' : 'color-off'} to='/categoria/enciclopedias'>Enciclopedias</NavLink>
             <NavLink className={({isActive})=> isActive ? 'color-on' : 'color-off'} to='/categoria/comics'>Comics</NavLink>
             <NavLink className={({isActive})=> isActive ? 'color-on' : 'color-off'} to='/categoria/revistas'>Revistas</NavLink>
           </Nav>  

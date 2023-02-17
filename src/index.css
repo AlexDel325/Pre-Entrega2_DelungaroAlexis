@@ -21,10 +21,9 @@ header {
 }
 
 body {
-  margin: 0;
-  display: flex;
   min-width: 320px;
   min-height: 100vh;
+  background-color: #ffefe8;
 }
 
 h1 {
@@ -33,6 +32,6 @@ h1 {
 }
 
 main {
-  margin-top: 118px;
+  padding-top: 118px;
   width: 80vw;
 }

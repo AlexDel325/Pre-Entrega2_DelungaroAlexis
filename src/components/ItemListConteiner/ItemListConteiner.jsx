@@ -1,6 +1,7 @@
 import { Link, useParams } from 'react-router-dom'
 import { useEffect, useState } from "react"
 import { gProducts } from "../../utils/gProducts"
+import "./ItemListConteiner.css"
 import CartCount from "../CartCount/CartCount"
 
 
@@ -27,27 +28,26 @@ function ItemListConteiner() {
 
     return (
     <>
-        <ul>
+        <div className='contenedor'>
             { loading ? 
-                    <li className="Carga">Cargando ...</li> 
+                    <h3 className="Carga">Cargando ...</h3> 
                 :
                     productos.map(producto => 
                     
-                    <li className="card" key={producto.id}>
-                        <h3 className="card-header"> {producto.name}</h3>
-                        <div className="card-body">
-                            <p><span>Categoria:</span> {producto.categoria}</p>
-                            <p><span>Precio:</span> ${producto.price}</p>
-                            <p><span>Unidades:</span> {producto.stock}</p>
+                    <div className="carta" key={producto.id}>
+                        <h3 className="titulo"> {producto.name}</h3>
+                        <div>
+                            <figure className='foto'><img src={producto.img} alt="imagen" /></figure>
+                            <p className='precio'> <span>Precio:</span>${producto.price}</p>
                         </div>
                         <div className="card-footer"> 
                             <Link to={`/detalle/${producto.name}`}>
-                                <button className="btn bg-primary">Detalle</button>
+                                <button className="boton">Detalle</button>
                             </Link>
                         </div>
-                    </li>
+                    </div>
                     )} 
-        </ul>
+        </div>
     </>
     )
     }
