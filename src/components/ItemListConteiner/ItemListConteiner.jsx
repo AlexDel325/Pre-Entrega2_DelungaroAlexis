@@ -15,7 +15,7 @@ function ItemListConteiner() {
 
         if(idCategoria){
             gProducts
-            .then(res => setProductos(res.filter(producto=> producto.categoria === idCategoria)))
+            .then(res => setProductos(res.filter(producto => producto.categoria === idCategoria)))
             .catch(err => console.log(err))
             .finally(() => setLoading(false))
         } else{

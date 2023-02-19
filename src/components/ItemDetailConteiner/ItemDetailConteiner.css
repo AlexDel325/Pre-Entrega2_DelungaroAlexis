@@ -1,0 +1,16 @@
+.detalle {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: white;
+    border-radius: 5px;
+}
+
+    .detalle-img, .detalle-texto{
+    max-width: 45%;
+    margin: 1rem;
+}
+
+.detalle-img img {
+    max-width: 100%;
+}
