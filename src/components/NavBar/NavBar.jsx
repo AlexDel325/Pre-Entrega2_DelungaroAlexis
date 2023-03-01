@@ -18,13 +18,13 @@ return(
             <img
               alt="logo"
               src={logo}
-              width="150"
+              width="200"
               height="50"
               className="d-inline-block align-top"
             />
           </Link>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
+        <Navbar.Collapse id="basic-navbar-nav" >
           <Nav className="me-auto navegacion">
             <NavLink className={({isActive})=> isActive ? 'color-on' : 'color-off'} to='/categoria/novelas'>Novelas</NavLink>
             <NavLink className={({isActive})=> isActive ? 'color-on' : 'color-off'} to='/categoria/enciclopedias'>Enciclopedias</NavLink>

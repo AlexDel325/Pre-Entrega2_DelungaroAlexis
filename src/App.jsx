@@ -5,8 +5,8 @@ import Container from 'react-bootstrap/Container';
 // ------ Componentes ------
 import NavBar from './components/NavBar/NavBar'
 import Banner from './components/Banner/Banner'
-import ItemListConteiner from './components/ItemListConteiner/ItemListConteiner'
-import ItemDetailConteiner from './components/ItemDetailConteiner/ItemDetailConteiner'
+import { ItemListConteiner } from './components/ItemListConteiner/ItemListConteiner'
+import { ItemDetailConteiner } from './components/ItemDetailConteiner/ItemDetailConteiner'
 
 // ----- Aplicacion -----
 function App() {

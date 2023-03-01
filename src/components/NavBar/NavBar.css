@@ -27,3 +27,8 @@
     font-weight: 600;
     margin:0 1rem;
 }
+
+.navbar-toggler{
+    border: none;
+    filter: invert();
+}

@@ -1,14 +1,13 @@
-import { Link, useParams } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
 import { useEffect, useState } from "react"
+
 import { gProducts } from "../../utils/gProducts"
-import "./ItemListConteiner.css"
-import CartCount from "../CartCount/CartCount"
+import { ItemList } from '../ItemList/ItemList'
 
-
-function ItemListConteiner() {
+export const ItemListConteiner = () => {
 
     const[ productos, setProductos] = useState([])
-    const[loading, setLoading] = useState(true)
+   
     const{ idCategoria } = useParams()
 
         useEffect(()=>{
@@ -26,30 +25,16 @@ function ItemListConteiner() {
         } 
     },[idCategoria])
 
-    return (
-    <>
-        <div className='contenedor'>
-            { loading ? 
-                    <h3 className="Carga">Cargando ...</h3> 
-                :
-                    productos.map(producto => 
-                    
-                    <div className="carta" key={producto.id}>
-                        <h3 className="titulo"> {producto.name}</h3>
-                        <div>
-                            <figure className='foto'><img src={producto.img} alt="imagen" /></figure>
-                            <p className='precio'> <span>Precio:</span>${producto.price}</p>
-                        </div>
-                        <div className="card-footer"> 
-                            <Link to={`/detalle/${producto.name}`}>
-                                <button className="boton">Detalle</button>
-                            </Link>
-                        </div>
-                    </div>
-                    )} 
-        </div>
-    </>
-    )
-    }
+    return <>
+            { productos.map(producto => 
+                <ItemList 
+                    id = {producto.id}
+                    nombre = {producto.name}
+                    precio = {producto.price}
+                    foto = {producto.img}
+                />
+            )}
+        </>
+}
     
-    export default ItemListConteiner
+    
