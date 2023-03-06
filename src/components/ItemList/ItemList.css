@@ -1,0 +1,17 @@
+.carta {
+    border-radius: 20px;
+    background-color: white;
+    width: 300px;
+    height: 450px;
+    background-color: white;
+    box-shadow: 0px 1px 31px 1px rgba(0, 0, 0, 0.33);
+    -webkit-box-shadow: 0px 1px 31px 1px rgba(0, 0, 0, 0.33);
+    -moz-box-shadow: 0px 1px 31px 1px rgba(0, 0, 0, 0.33);
+    display: flex;
+    justify-content: space-between;
+
+    transition: box-shadow 1.5s;
+    margin: 1.5rem;
+    padding: 0;
+}
+

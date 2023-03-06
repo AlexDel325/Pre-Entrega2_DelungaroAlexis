@@ -1,7 +1,12 @@
 import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
+
+import Container from "react-bootstrap/esm/Container"
+
 import { gProducts } from "../../utils/gProducts"
 import { Detail } from "../Detail/detail"
+
+
 
 
 export const ItemDetailConteiner = () => {
@@ -9,8 +14,6 @@ export const ItemDetailConteiner = () => {
     const {nombreProducto} = useParams()
 
     const[ productos, setProductos] = useState([])
-
-   
 
         useEffect(()=>{
 
@@ -22,17 +25,18 @@ export const ItemDetailConteiner = () => {
     },[])
 
     return (
-    <>
+    <Container fluid>
         { productos.map(producto => 
                 <Detail 
                     nombre = {producto.name}
                     categoria = {producto.categoria}
-                    descricion = {producto.description}
+                    descripcion = {producto.description}
                     stock = {producto.stock}
                     precio = {producto.price}
                     foto = {producto.img}
                 />
             )} 
-    </>
+    </Container>
     )
     }
+

@@ -1,31 +1,33 @@
 import ItemCount from "../ItemCount/ItemCount"
 
-export const Detail = ({ nombre, categoria, precio, foto, stock}) =>{
+import Row from 'react-bootstrap/Row'
+import Col from "react-bootstrap/Col"
+import './Detail.css'
+
+export const Detail = ({ nombre, categoria, precio, foto, stock, descripcion}) =>{
 
     return (
     <>             
-        <div className="detalle">
-                        <figure className="detalle-img"><img src={foto} alt="foto producto" /></figure>
+        <Row className="detalle">
+            
+            <Col>
+            <figure className="detalle-img"><img src={foto} alt="foto producto" /></figure>
+            </Col>
 
-                        <div className="detalle-texto">
-                        <h2>{nombre}</h2>
-                        <p><span>Categoria:</span> {categoria}</p>
-                        <p><span>Unidades:</span> {stock}</p>
-                        <p>{precio}</p>
-                  
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi similique quidem reiciendis! Praesentium, 
-                        aperiam nostrum, porro dignissimos corporis id voluptas obcaecati dolor dolore facilis a quaerat optio nisi 
-                        impedit magni, rerum similique. Tempore commodi asperiores magnam repellat quas sunt, necessitatibus nisi ratione 
-                        eveniet nesciunt labore in temporibus dolores? Possimus, aliquam?
-                    </p>
-                    
+            <Col>
+                <div className="detalle-info">
+                    <h2 className="detalle-titulo">{nombre}</h2>
+                    <p  className="detalle-descrip"> {descripcion} </p>
+                    <p  className="detalle-cat"> <span>Categoria:</span> {categoria}</p>
+                    <p  className="detalle-stock"> <span>Unidades:</span> {stock}</p>  
+                    <p  className="detalle-precio"> ${precio}</p>
+                </div>
 
-                    </div>
-                    
-                   <ItemCount initial={1} stock={stock} onAdd={()=>{}}/>
+                <ItemCount initial={1} stock={stock} onAdd={()=>{}}/>
                 
-                 </div>
+            </Col>
+                
+         </Row>
     
     </>
     )
